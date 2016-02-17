@@ -4,7 +4,7 @@ name := "PlayStartApp"
 
 version := "1.0-SNAPSHOT"
 
-scalaVersion := "2.10.5"
+scalaVersion := "2.11.7"
 
 libraryDependencies ++= Seq(
   jdbc,
@@ -22,4 +22,10 @@ resolvers ++= Seq(
 routesGenerator := InjectedRoutesGenerator
 
 lazy val root = (project in file(".")).enablePlugins(play.PlayJava, PlayEbean)
+
+//Download source files
+EclipseKeys.withSource := true
+
+// Compile the project before generating Eclipse files, so that generated .scala or .class files for views and routes are present
+EclipseKeys.preTasks := Seq(compile in Compile)
 

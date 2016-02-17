@@ -15,3 +15,5 @@ addSbtPlugin("com.typesafe.sbt" % "sbt-less" % "1.0.6") //1.0.6 stops less from 
 addSbtPlugin("com.typesafe.sbt" % "sbt-coffeescript" % "1.0.0")
 
 addSbtPlugin("com.typesafe.sbt" % "sbt-play-ebean" % "1.0.0")
+
+addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "4.0.0")
